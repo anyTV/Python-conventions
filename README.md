@@ -86,7 +86,7 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
    	```	    		
 	
 	The closing brace/bracket/parenthesis on multi-line constructs may be lined up under the first character of the line that starts the multi-line construct
-	<!-- language:python -->
+	```python
 		
 		my_list = [
     		1, 2, 3,
@@ -97,13 +97,14 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
     		'a', 'b', 'c',
     		'd', 'e', 'f'
 		)
+	```
 
 4. Imports
 	- Imports should occur at the top of the module, after any module docstring
 	- Use of absolute imports is much more recommended. Wildcard imports should be avoided
 	- Standard imports, those that uses the `import` keyword, should each be in a separate file
 
-	<!-- language:python -->
+	```python
 			
 		#Good
 			
@@ -113,6 +114,7 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
 		#Bad
 			
 		import os, sys
+	```
 	
 	- Imports should be grouped in the following order:
 		1. standard library imports
@@ -122,7 +124,7 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
 
 	Avoid extraneous whitespace in the following situations:
 	
-	<!-- language:python -->
+	```python
 		
 		#Good
 		spam(ham[1], {eggs: 2})
@@ -166,13 +168,13 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
 		#Bad
 		dct ['key'] = lst [index]
 		
-		
+	```	
 
 6. Other Code Patterns
 	
 	Surround operators with white spaces. If operators with different priorities are used, you can group them using spaces.
 	
-	<!-- language:python -->
+	```python
 		
 		#Good 
 		
@@ -189,28 +191,30 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
 		x = x * 2 - 1
 		hypot2 = x * x + y * y
 		c = (a + b) * (a - b)
+	```
 		
 	Don't use spaces around the = sign when used to indicate a keyword argument or a default parameter value.
 	
-	<!-- language:python -->
+	```python
 		
 		#Good
 		
 		def complex(real, imag=0.0):
-    		return magic(r=real, i=imag)
+    			return magic(r=real, i=imag)
     		
-    	#Bad
+    		#Bad
     	
-    	def complex(real, imag = 0.0):
-    		return magic(r = real, i = imag)
-    		
-    Don't put multi-clause statements on the same line, especially when dealing with if, for ,while , try, catch.
+    		def complex(real, imag = 0.0):
+    			return magic(r = real, i = imag)
+    	```
+    	
+    	Don't put multi-clause statements on the same line, especially when dealing with if, for ,while , try, catch.
     
-    <!-- language:python -->
+    	```python
     	
-    	#Really Bad
+    		#Really Bad
     	
-    	if foo == 'blah': do_blah_thing()
+    		if foo == 'blah': do_blah_thing()
 		else: do_non_blah_thing()
 
 		try: something()
@@ -221,10 +225,11 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
 
 		if foo == 'blah': one(); two(); three()
 		
-		
+	 ```	
+	 
 	Use is not operator rather than not ... is
 	
-	<!-- language:python -->
+	```python
 	
 		#Good 
 	
@@ -233,11 +238,11 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
 		#Bad
 		
 		if not foo is None:
+	```
 		
 	Always use a def statement instead of an assignment statement that binds a lambda expression directly to an identifier.
 	
-	<!-- language:python -->
-	
+	```python
 		#Good
 		
 		def f(x): return 2*x
@@ -246,11 +251,11 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
 		
 		f = lambda x: 2*x
 		
-		
+	```	
 		
 	When catching exceptions, mention specific exceptions whenever possible instead of using a bare `except:` clause. Derive exceptions from Exception rather than BaseException
 	
-	<!-- language:python -->
+	```python
 	
 		try:
     		import platform_specific_module
@@ -260,10 +265,11 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
 		except ImportError:						
     		platform_specific_module = None	
 		
-		
+	```
+	
 	When binding caught exceptions to a name, prefer the explicit name binding syntax
 		
-	<!-- language:python -->
+	```python
 		
 		try:
     		process_data()
@@ -271,11 +277,11 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
 		# raise DataProcessingFailedError, str(exc) is not supported in Python 3
 		except Exception as exc:
     		raise DataProcessingFailedError(str(exc))
-	
+	```
 	
 	Be consistent in return statements. Either all return statements in a function should return an expression, or none of them should. If any return statement returns an expression, any return statements where no value is returned should explicitly state this as return `None` , and an explicit return statement should be present at the end of the function.
 
-	<!-- language:python -->
+	```python
 		
 		#Good
 		
@@ -300,49 +306,53 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
     		if x < 0:
         		return
     		return math.sqrt(x)
+    	```
     		
-    Use ''.startswith() and ''.endswith() instead of string slicing to check for prefixes or suffixes.
+    	Use ''.startswith() and ''.endswith() instead of string slicing to check for prefixes or suffixes.
     	
-    <!-- language:python -->
+    	```python
     
-    	#Good
+	    	#Good
+	    	
+	    	if foo.startswith('bar'):
+	    	
+	    	#Bad
+	    	
+	    	if foo[:3] == 'bar':
+	    	
+    	```
     	
-    	if foo.startswith('bar'):
-    	
-    	#Bad
-    	
-    	if foo[:3] == 'bar':
-    	
-    
 	Object type comparisons should always use isinstance() instead of comparing types directly.
     
-    <!-- language:python -->
+    	```python
     	
-    	#Good
-    	
-    	if isinstance(obj, int):
-    	
-    	#Bad
-    	
-    	if type(obj) is type(1):
+	    	#Good
+	    	
+	    	if isinstance(obj, int):
+	    	
+	    	#Bad
+	    	
+	    	if type(obj) is type(1):
+    	```
     	
 	For sequences, (strings, lists, tuples), use the fact that empty sequences are false.
     
-    <!-- language:python -->
+	```python
     	
-    	#Good
+	    	#Good
+	    	
+	    	if not seq:
+	    	if seq:
+	    	
+	    	#Bad
+	    	
+	    	if len(seq):
+	    	if not len(seq):	
+    	```
     	
-    	if not seq:
-    	if seq:
-    	
-    	#Bad
-    	
-    	if len(seq):
-    	if not len(seq):	
-    	
-    Don't compare boolean values to True or False using `==`
+    	Don't compare boolean values to True or False using `==`
     
-    <!-- language:python -->
+    	```python
 		
 		#Good
 		
@@ -353,7 +363,7 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
 		if greeting == True:
 		if greeting is True:
 		
-
+	```
 --------------------------------------------------------------------------------
 
 References:
