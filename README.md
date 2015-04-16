@@ -216,15 +216,15 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
     		#Really Bad
     	
     		if foo == 'blah': do_blah_thing()
-		else: do_non_blah_thing()
+			else: do_non_blah_thing()
 
-		try: something()
-		finally: cleanup()
+			try: something()
+			finally: cleanup()
 
-		do_one(); do_two(); do_three(long, argument,
+			do_one(); do_two(); do_three(long, argument,
                              list, like, this)
 
-		if foo == 'blah': one(); two(); three()
+			if foo == 'blah': one(); two(); three()
 		
 	```	
 	 
@@ -309,7 +309,7 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
     		return math.sqrt(x)
 	```
     		
-	Use ''.startswith() and ''.endswith() instead of string slicing to check for prefixes or suffixes.
+	Use `.startswith()` and `.endswith()` instead of string slicing to check for prefixes or suffixes.
     	
 	```python
 	
