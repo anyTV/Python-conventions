@@ -53,7 +53,7 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
 3. Indentation
 	
 	Use 4 spaces per indentation level. `Hanging indents`, code that is a continuation of the line above, should be indented to the next level.
-	<!-- language:python -->
+	```python
 		
 		#Good
 		
@@ -83,7 +83,7 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
     		var_one, var_two, var_three,
     		var_four):
     		print(var_one)
-   		    		
+   	```	    		
 	
 	The closing brace/bracket/parenthesis on multi-line constructs may be lined up under the first character of the line that starts the multi-line construct
 	<!-- language:python -->
