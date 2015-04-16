@@ -200,12 +200,12 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
 		#Good
 		
 		def complex(real, imag=0.0):
-    			return magic(r=real, i=imag)
-    		
-    		#Bad
-    	
-    		def complex(real, imag = 0.0):
-    			return magic(r = real, i = imag)
+			return magic(r=real, i=imag)
+			
+		#Bad
+		
+		def complex(real, imag = 0.0):
+			return magic(r = real, i = imag)
 	
 	```
     	
@@ -312,14 +312,14 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
 	Use ''.startswith() and ''.endswith() instead of string slicing to check for prefixes or suffixes.
     	
 	```python
-    
-	    	#Good
-	    	
-	    	if foo.startswith('bar'):
-	    	
-	    	#Bad
-	    	
-	    	if foo[:3] == 'bar':
+	
+		#Good
+		
+		if foo.startswith('bar'):
+		
+		#Bad
+		
+		if foo[:3] == 'bar':
 	    	
 	```
     	
@@ -327,28 +327,28 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
     
 	```python
     	
-	    	#Good
-	    	
-	    	if isinstance(obj, int):
-	    	
-	    	#Bad
-	    	
-	    	if type(obj) is type(1):
+		#Good
+		
+		if isinstance(obj, int):
+		
+		#Bad
+		
+		if type(obj) is type(1):
 	```
     	
 	For sequences, (strings, lists, tuples), use the fact that empty sequences are false.
     
 	```python
-    	
-	    	#Good
-	    	
-	    	if not seq:
-	    	if seq:
-	    	
-	    	#Bad
-	    	
-	    	if len(seq):
-	    	if not len(seq):	
+	
+		#Good
+		
+		if not seq:
+		if seq:
+		
+		#Bad
+		
+		if len(seq):
+		if not len(seq):	
 	```
     	
 	Don't compare boolean values to True or False using `==`
