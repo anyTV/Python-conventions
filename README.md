@@ -11,7 +11,7 @@ Use `pylint` and `pep8` for checking if the codes follow standard. To install, r
 If you are using Sublime, you can integrate pylint and pep8 through SublimeLinter. See instructions for [SublimeLinter-pylint](https://github.com/SublimeLinter/SublimeLinter-pylint) and [SublimeLinter-pep8](https://github.com/SublimeLinter/SublimeLinter-pep8).
 
 Use Python PEP8 Autoformat to automatically format your code to pep8 standards. See [docs](https://bitbucket.org/StephaneBunel/pythonpep8autoformat) for instructions.
-Don't put multi-clause
+
 
 ### Naming Convention
 
@@ -206,10 +206,11 @@ Don't put multi-clause
     	
     		def complex(real, imag = 0.0):
     			return magic(r = real, i = imag)
-    	```
+	
+	```
     	
 	Don't put multi-clause statements on the same line, especially when dealing with if, for ,while , try, catch.
-    
+	
 	```python
     	
     		#Really Bad
