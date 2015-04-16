@@ -208,7 +208,7 @@ Don't put multi-clause
     			return magic(r = real, i = imag)
     	```
     	
-    	Don't put multi-clause statements on the same line, especially when dealing with if, for ,while , try, catch.
+	Don't put multi-clause statements on the same line, especially when dealing with if, for ,while , try, catch.
     
 	```python
     	
@@ -225,7 +225,7 @@ Don't put multi-clause
 
 		if foo == 'blah': one(); two(); three()
 		
-	 ```	
+	```	
 	 
 	Use is not operator rather than not ... is
 	
