@@ -228,7 +228,7 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
 		
 	```	
 	 
-	Use is not operator rather than not ... is
+	Use `is not` operator rather than `not ... is`
 	
 	```python
 	
@@ -307,11 +307,11 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
     		if x < 0:
         		return
     		return math.sqrt(x)
-    	```
+	```
     		
-Use ''.startswith() and ''.endswith() instead of string slicing to check for prefixes or suffixes.
+	Use ''.startswith() and ''.endswith() instead of string slicing to check for prefixes or suffixes.
     	
-    	```python
+	```python
     
 	    	#Good
 	    	
@@ -321,11 +321,11 @@ Use ''.startswith() and ''.endswith() instead of string slicing to check for pre
 	    	
 	    	if foo[:3] == 'bar':
 	    	
-    	```
+	```
     	
-Object type comparisons should always use isinstance() instead of comparing types directly.
+	Object type comparisons should always use isinstance() instead of comparing types directly.
     
-    	```python
+	```python
     	
 	    	#Good
 	    	
@@ -334,9 +334,9 @@ Object type comparisons should always use isinstance() instead of comparing type
 	    	#Bad
 	    	
 	    	if type(obj) is type(1):
-    	```
+	```
     	
-For sequences, (strings, lists, tuples), use the fact that empty sequences are false.
+	For sequences, (strings, lists, tuples), use the fact that empty sequences are false.
     
 	```python
     	
@@ -349,11 +349,11 @@ For sequences, (strings, lists, tuples), use the fact that empty sequences are f
 	    	
 	    	if len(seq):
 	    	if not len(seq):	
-    	```
+	```
     	
-    	Don't compare boolean values to True or False using `==`
+	Don't compare boolean values to True or False using `==`
     
-    	```python
+	```python
 		
 		#Good
 		
