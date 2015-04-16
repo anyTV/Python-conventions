@@ -11,7 +11,7 @@ Use `pylint` and `pep8` for checking if the codes follow standard. To install, r
 If you are using Sublime, you can integrate pylint and pep8 through SublimeLinter. See instructions for [SublimeLinter-pylint](https://github.com/SublimeLinter/SublimeLinter-pylint) and [SublimeLinter-pep8](https://github.com/SublimeLinter/SublimeLinter-pep8).
 
 Use Python PEP8 Autoformat to automatically format your code to pep8 standards. See [docs](https://bitbucket.org/StephaneBunel/pythonpep8autoformat) for instructions.
-
+Don't put multi-clause
 
 ### Naming Convention
 
@@ -210,7 +210,7 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
     	
     	Don't put multi-clause statements on the same line, especially when dealing with if, for ,while , try, catch.
     
-    	```python
+	```python
     	
     		#Really Bad
     	
@@ -308,7 +308,7 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
     		return math.sqrt(x)
     	```
     		
-    	Use ''.startswith() and ''.endswith() instead of string slicing to check for prefixes or suffixes.
+Use ''.startswith() and ''.endswith() instead of string slicing to check for prefixes or suffixes.
     	
     	```python
     
@@ -322,7 +322,7 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
 	    	
     	```
     	
-	Object type comparisons should always use isinstance() instead of comparing types directly.
+Object type comparisons should always use isinstance() instead of comparing types directly.
     
     	```python
     	
@@ -335,7 +335,7 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
 	    	if type(obj) is type(1):
     	```
     	
-	For sequences, (strings, lists, tuples), use the fact that empty sequences are false.
+For sequences, (strings, lists, tuples), use the fact that empty sequences are false.
     
 	```python
     	
