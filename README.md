@@ -1,7 +1,5 @@
 # Python Coding Conventions
 
---------------------------------------------------------------------------------
-
 List of standards for the most commonly used codes and patterns in Python. Conventions will allow developers to create code bases that will be easier for other developers to read and understand.
 
 
