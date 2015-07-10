@@ -111,7 +111,7 @@ Use Python PEP8 Autoformat to automatically format your code to pep8 standards. 
 		import os
 		import sys
 			
-		#Bad
+		#Not so bad depending on framework used
 			
 		import os, sys
 	```
